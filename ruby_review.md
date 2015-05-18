@@ -7,17 +7,17 @@
 array = ["first", "second", "third", "fourth"]
 ```
 n.b. each method assumes that you start out with this array at the beginning of each method and not the resulting array from the previous method
-#[]
+\#[]
 ```
 array[1]
 #=> "second"
 ```
-#index
+\#index
 ```
 array.index["third"]
 #=> 2
 ```
-#include?
+\#include?
 ```
 array.include?("fourth")
 #=> true
@@ -82,7 +82,8 @@ array
 #=> ["first", "second", "fourth"]
 ```
 ##Hashes
-hash = {first_key: "first_value", second_key: "second_value", third_key: "third_value" }
+```
+hash = { first_key: "first_value", second_key: "second_value", third_key: "third_value" }
 ```
 \#keys
 ```
