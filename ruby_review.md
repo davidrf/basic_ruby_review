@@ -1,5 +1,28 @@
 #Basic Ruby Review
 
+##Strings
+String Interpolation
+```
+launcher_count = 44
+"We have #{launcher_count} Launchers"
+#=> "We have 44 Launchers"
+```
+ \#length
+ ```
+ "hello".length
+ #=> 5
+ ```
+ \#split
+ ```
+ "split.this".split
+ #=> ["split", "this"]
+ ```
+ #join is technically an array method, but included here because it returns a string and is the opposite of #split
+ \#join
+ ```
+ ["join", "this"].join(" ")
+ #=> "join this"
+ ```
 ##Arrays
 
 ```
