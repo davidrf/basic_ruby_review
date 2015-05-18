@@ -17,13 +17,12 @@ launcher_count = 44
  "split.this".split(".")
  #=> ["split", "this"]
  ```
- #join is technically an array method, but I included here because it returns a string and is the opposite of #split
-
  \#join
  ```
  ["join", "this"].join(".")
  #=> "join.this"
  ```
+ #join is technically an array method, but I included here because it returns a string and is the opposite of #split
 ##Arrays
 
 ```
@@ -136,4 +135,6 @@ hash.values
 ```
 ##Enumerables
 ```
-array.each do 
+array.each do |element|
+
+
