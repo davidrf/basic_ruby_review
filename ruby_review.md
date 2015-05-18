@@ -87,6 +87,7 @@ array
 hash = { first_key: "first_value", second_key: "second_value", third_key: "third_value" }
 ```
 n.b. each method assumes that you start out with this hash at the beginning of each method and not the resulting hash from the previous method
+
 \#[]
 ```
 hash[:second_key]
