@@ -265,8 +265,8 @@ def complex_equation(number = 1)
   number + 1
 end
 
-complex_equation(1)
-#=> 2
+complex_equation(5)
+#=> 6
 
 complex_equation
 #=> 1
