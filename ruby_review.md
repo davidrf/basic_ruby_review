@@ -226,13 +226,19 @@ def complex_equation(number)
   result = number + 1
   return result
 end
+
+complex_equation(3)
+#=> 4
 ```
 Ruby methods return the last evaluated line, so no need for explicit return in previous example
 ```
 def complex_equation(number)
   result = number + 1
   result
-en
+end
+
+complex_equation(3)
+#=> 4
 ```
 Also, it's worth noting that the puts method returns nil
 ```
@@ -252,4 +258,16 @@ end
 
 puts say_hi
 #Ouputs Hello! to the terminal
+```
+Set default values to methods
+```
+def complex_equation(number = 1)
+  number + 1
+end
+
+complex_equation(1)
+#=> 2
+
+complex_equation
+#=> 1
 ```
