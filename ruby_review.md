@@ -171,6 +171,31 @@ array = ["a", "ccc", "bb", "dddd"]
 array.sort_by { |element| element.length }
 #=> ["a", "bb", "ccc", "dddd"]
 ```
+##Conditionals
+Examples
+```
+1 == 1
+#=> true 
+1 == "1"
+#=> false
+4 > 2
+#=> true
+1 != 2
+#=> true
+!(1 == 1)
+#=> true
+```
+###Truthiness and Falsiness
+Everything except false and nil evaluates to true in Ruby
+```
+if false
+  #code never gets run
+elsif nil
+  #code never gets run
+elsif "" && 0
+  #empty strings and 0 evaluate to true
+end
+```
 ## Flow Control
 Example of if, elsif, and else statements
 ```
@@ -180,16 +205,6 @@ elsif conditional_2 && conditional_3
   #do something if both condiditons 2 and 3 are true
 elsif conditional_4 || conditional_5
   #do something if either conditional 4 or 5 is true
-end
-```
-Everything except false and nil evaluates to true in Ruby
-```
-if false
-  #code never gets run
-elsif nil
-  #code never gets run
-elsif "" && 0
-  #empty strings and 0 evaluate to true
 end
 ```
 Can check if the opposite is true with ! before conditional or using unless statement
@@ -259,14 +274,14 @@ end
 puts say_hi
 #Ouputs Hello! to the terminal
 ```
-Set default values to methods
+Set default values in methods
 ```
 def complex_equation(number = 1)
   number + 1
 end
 
 complex_equation(5)
-#=> 6
+#=> k
 
 complex_equation
 #=> 1
