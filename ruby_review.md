@@ -141,7 +141,7 @@ array.each do |element|
 end
 #Outputs elements to terminal
 
-hash.each.do |key, value|
+hash.each do |key, value|
  puts "Key is: #{key} and value is: #{value}"
 end
 
@@ -150,7 +150,7 @@ end
 \#map
 ```
 array = [2, 5, 8]
-array.map = { |element| element + 2 }
+array.map { |element| element + 2 }
 #=> [3, 6, 9]
 ```
 \#inject
@@ -170,4 +170,86 @@ array.sort
 array = ["a", "ccc", "bb", "dddd"]
 array.sort_by { |element| element.length }
 #=> ["a", "bb", "ccc", "dddd"]
+```
+## Flow Control
+Example of if, elsif, and else statements
+```
+if conditional_1
+  #do something if conditional 1 is true
+elsif conditional_2 && conditional_3
+  #do something if both condiditons 2 and 3 are true
+elsif conditional_4 || conditional_5
+  #do something if either conditional 4 or 5 is true
+end
+```
+Everything except false and nil evaluates to true in Ruby
+```
+if false
+  #code never gets run
+elsif nil
+  #code never gets run
+elsif "" && 0
+  #empty strings and 0 evaluate to true
+end
+```
+Can check if the opposite is true with ! before conditional or using unless statement
+```
+if !false
+  #code gets executed
+end
+
+unless false
+  #code gets executed
+end
+```
+Example of while loop
+```
+count = 0
+while count < 5
+ count += 1
+end
+count
+#=> 5
+```
+Using until loop instead
+```
+count = 0
+until count == 5
+  count += 1
+end
+#=> 5
+```
+##Methods
+Example method
+```
+def complex_equation(number)
+  result = number + 1
+  return result
+end
+```
+Ruby methods return the last evaluated line, so no need for explicit return in previous example
+```
+def complex_equation(number)
+  result = number + 1
+  result
+en
+```
+Also, it's worth noting that the puts method returns nil
+```
+def say_hi
+  puts "Hello!"
+end
+
+say_hi
+#Ouputs Hello! to the terminal
+```
+While this does output "Hello" to the terminal, the method itself returns nil.
+Methods in general should return values, it would be better to do the following.
+```
+def say_hi
+  "Hello!"
+end
+
+puts say_hi
+#Ouputs Hello! to the terminal
 ```
